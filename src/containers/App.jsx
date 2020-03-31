@@ -1,11 +1,11 @@
 import React from 'react';
 import Header from '../components/Header';
-import NotDone from '../components/NotDone';
+import TodoList from '../components/TodoList';
 
 const App = () => (
     <div >
         <Header />
-        <NotDone />
+        <TodoList />
     </div>
 );
 
