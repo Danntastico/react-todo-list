@@ -1,12 +1,12 @@
 import React from 'react';
-import '../assets/styles/TodoItem.css';
+import '../assets/styles/DoneItem.css';
 
-const TodoItem = (props) => (
+const DoneItem = (props) => (
   <div key={props.todo.id} 
-    className="my-4 p-2 divItem rounded-lg d-flex justify-content-between"
+    className="shadow my-1 p-2 doneItem rounded-lg d-flex justify-content-between"
     onClick={props.toggleComplete} 
   >
-    <p className="h5"  
+    <p className="text-success"  
       style = 
         {{textDecoration: props.todo.complete ? "line-through" : ""}}
     >{props.todo.text}</p>
@@ -14,4 +14,4 @@ const TodoItem = (props) => (
   </div>
 )
 
-export default TodoItem;
+export default DoneItem;

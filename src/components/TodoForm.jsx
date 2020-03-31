@@ -25,10 +25,10 @@ export default class TodoForm extends React.Component {
     })
   }
 
-  render () {
+  render() {
     return (
       <form onSubmit={this.handleSubmit} className="d-flex">
-        <input name="text" className="form-control add-todo" placeholder="Add todo..." onChange={this.handleChange} value={this.state.text}/>
+        <input name="text" className="form-control" placeholder="Add todo..." onChange={this.handleChange} value={this.state.text} />
         <button className="btn ml-2 rounded-circle addBtn text-light"> + </button>
       </form>
     );
