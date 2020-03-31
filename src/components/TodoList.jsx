@@ -21,14 +21,9 @@ export default class TodoList extends React.Component {
                         <div className="todolist not-done">
                             <h2>Todos</h2>
                             <TodoForm onSubmit={this.addTodo}/>
-                            <hr />
-                            <ul id="sortable" className="list-unstyled">
                                 {
                                     this.state.todos.map(todo => <TodoItem item={todo.text} id={todo.id}/>)
                                 }
-                            </ul>
-
-                            <hr />
                             <button id="checkAll" className="btn btn-success m-1 float-right">Mark all</button>
                         </div>
                     </div>
