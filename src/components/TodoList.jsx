@@ -21,17 +21,11 @@ export default class TodoList extends React.Component {
                         <div className="todolist not-done">
                             <h2>Todos</h2>
                             <TodoForm onSubmit={this.addTodo}/>
-                            {JSON.stringify(this.state.todos)}
                             <hr />
                             <ul id="sortable" className="list-unstyled">
-                                <li className="ui-state-default">
-                                    <div className="checkbox">
-                                        <label>
-                                            <input type="checkbox" value="" /> Take Out the trash
-                                        </label>
-                                    </div>
-                                </li>
-                                <TodoItem item={JSON.stringify(this.state.todos)}/>
+                                {
+                                    this.state.todos.map(todo => <TodoItem item={todo.text} id={todo.id}/>)
+                                }
                             </ul>
 
                             <hr />

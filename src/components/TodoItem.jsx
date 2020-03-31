@@ -1,8 +1,8 @@
 import React from 'react';
 
-const TodoItem = ({ item }) => (
+const TodoItem = ({ item , id}) => (
   <li className="ui-state-default">
-    <div className="checkbox">
+    <div key={id} className="checkbox">
       <label>
         <input type="checkbox" value="" /> {item}
       </label>
